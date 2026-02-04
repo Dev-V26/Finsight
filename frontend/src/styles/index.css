@@ -40,3 +40,26 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.35);
 }
+/* ==============================
+   Dark dropdown background (select/options)
+   ============================== */
+
+/* Base select styling */
+select {
+  background-color: #0b1220; /* dark navy */
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Dropdown options (Windows/Chrome/Edge fix) */
+select option {
+  background-color: #0b1220; /* dropdown bg */
+  color: #ffffff;
+}
+
+/* Selected / hover option */
+select option:checked,
+select option:hover {
+  background-color: #1e293b; /* slate-800 */
+  color: #ffffff;
+}

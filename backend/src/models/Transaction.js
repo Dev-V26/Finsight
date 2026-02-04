@@ -8,17 +8,14 @@ const transactionSchema = new mongoose.Schema(
 
     amount: { type: Number, required: true, min: 0 },
 
-    category: { type: String, required: true, trim: true },
+    category: { type: String, required: true, trim: true, maxlength: 60 },
 
     date: { type: Date, required: true, index: true },
 
-    paymentMethod: {
-      type: String,
-      enum: ["cash", "card", "upi", "bank_transfer", "other"],
-      default: "other"
-    },
+    // ✅ allow fixed + custom values (validated by zod)
+    paymentMethod: { type: String, trim: true, maxlength: 60, default: "other" },
 
-    notes: { type: String, default: "", trim: true, maxlength: 500 }
+    notes: { type: String, default: "", trim: true, maxlength: 500 },
   },
   { timestamps: true }
 );
