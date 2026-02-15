@@ -1,0 +1,4 @@
+to run the backed and frontend 
+    command 
+    Backed :- npm run dev
+    Frontend :- npm run dev 
